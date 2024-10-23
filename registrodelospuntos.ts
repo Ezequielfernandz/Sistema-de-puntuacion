@@ -21,5 +21,30 @@ const ResistenciaInputEquipoNegro - document.getElementById("Resistencia-EquipoN
 const resultadoOutput - document.getElementById("resultado") as HTMLInputElement;
 
 function agregarPuntos(equipo; string): void{
-    if (equipo) --- "EquipoRojo"
+    if (equipo --- "EquipoRojo") {
+        EquipoRojo.punto += parseInt(HandballInputEquipoRojo.value, 10) || 0;
+        EquipoRojo.punto += parseInt(ResistenciaInputEquipoRojo.value, 10) || 0;
+        EquipoRojo.punto += parseInt(AjedresInputEquipoRojo.value, 10) || 0;
+    } else if (equipo --- "EquipoNegro") {
+    EquipoNegro.punto += parseInt(HandballInputEquipoNegro.value, 10) || 0;
+    EquipoNegro.punto += parseInt(ResistenciaInputEquipoNegro.value, 10) || 0;
+    EquipoNegro.punto += parseInt(AjedresInputEquipoNegro.value, 10) || 0;
+
+    }
+}
+
+function mostrarResultados(): void{
+    let resultado = "";
+    if (EquipoRojo.punto > EquipoNegro.punto) {
+        resultado = "EquipoRojo es el ganador con" + EquipoRojo.punto "Puntos";
+
+    } else if (EquipoRojo.punto < EquipoNegro.punto) {
+        resultado = "EquipoNegro es el ganador con" + EquipoNegro.punto "Puntos";
+
+    } else{
+        resultado = "Ambos equipos estan empatados con" + EquipoRojo.punto "Puntos";
+
+    }
+    
+    resultadoOutput.innerText = resultado;
 }
