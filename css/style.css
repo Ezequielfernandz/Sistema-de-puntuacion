@@ -1,0 +1,46 @@
+/* Centra los cuadros en el medio de la página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para los cuadros de cada equipo */
+#add1, #add2 {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo específico para el equipo rojo */
+.equipo1 h2 {
+    color: red;
+}
+
+/* Estilo específico para el equipo negro */
+.equipo2 h2 {
+    color: black;
+}
+
+/* Botones con estilo */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
